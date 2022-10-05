@@ -28,7 +28,6 @@ class prime_nums:
                 return False
             elif i >= sqrtx and x not in self.__all_simple_numbers:    # we didn't find integer divisor, the num is simple
                 self.__all_simple_numbers.append(x)   # add it to arr of simple nums
-                #print('weve got')
                 return True
                 #break                           # then break the loop
 
@@ -66,7 +65,11 @@ class prime_nums:
 #                          UnitTest Class                                     #
 #=============================================================================#
 class SN_Test(unittest.TestCase):
-    sn = prime_nums(2, 10)
+    #sn = prime_nums(2, 10)
+
+    def __main__(self, a, b):
+        pass
+
     def init_prime(self):
         self.sn = prime_nums(2, 10)
 
@@ -87,7 +90,8 @@ if __name__ == '__main__':
     
     try:
         a, b = int(sys.argv[1]), int(sys.argv[2])
-        unittest.main(a, b)
+        #del sys.argv[1:]
+        #unittest.main()
         print('a = ', a, ' b = ', b)
         s_nums = prime_nums(a, b)
         s_nums.show_sum()
